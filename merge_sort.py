@@ -1,4 +1,4 @@
-def merge_sort(myList):
+def merge_sort(myList, reverse=False):
     if len(myList) > 1:
         mid = len(myList) // 2
         left = myList[:mid]
@@ -37,3 +37,7 @@ def merge_sort(myList):
             myList[k]=right[j]
             j += 1
             k += 1
+    if reverse:
+        myList = list(reversed(myList))
+                      
+    return myList
