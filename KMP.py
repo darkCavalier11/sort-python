@@ -2,7 +2,10 @@
 # of a string when there is a mismatch we need not come to beginning of the pattern
 # to match with main string instead we came to the position where suffix is prefix.
 # suffix is prefix means where a end of string(a substring at the end) match
-# exactly with a substring at the beginning and we start our search at index + 1.
+# exactly with a substring at the beginning and we start our search at index + 1
+# eg 'ltrnpqltrn' is a pattern. so while matching we found a mismatch between second 'r' and
+# the main string. so we came to the first substring where 'r' is seen first and start our comparison
+# from 'n'
 # making table of suffix and prefix
 def makeTable(s):
     table = [0] * len(s)
