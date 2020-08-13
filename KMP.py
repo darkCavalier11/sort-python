@@ -1,3 +1,8 @@
+# form the naive approach KMP uses the fact that when matching each character
+# of a string when there is a mismatch we need not come to beginning of the pattern
+# to match with main string instead we came to the position where suffix is prefix.
+# suffix is prefix means where a end of string(a substring at the end) match
+# exactly with a substring at the beginning and we start our search at index + 1.
 # making table of suffix and prefix
 def makeTable(s):
     table = [0] * len(s)
